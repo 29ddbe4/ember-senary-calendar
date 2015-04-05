@@ -17,4 +17,16 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('bower_components/moment/moment.js');
+
+app.import('vendor/avenirnextltpro-regular.woff', {
+  destDir: 'assets/fonts'
+});
+app.import('vendor/avenirnextltpro-bold.woff', {
+  destDir: 'assets/fonts'
+});
+app.import('vendor/avenirnextltpro-demi.woff', {
+  destDir: 'assets/fonts'
+});
+
 module.exports = app.toTree();

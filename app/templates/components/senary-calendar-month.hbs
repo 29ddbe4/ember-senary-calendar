@@ -1,0 +1,6 @@
+<div class="month-label">{{labelOfMonth}}</div>
+<div class="month">
+  {{#each date in datesOfMonth}}
+    <div class="date" {{bind-attr data-date="date.str"}}>{{date.num}}</div>
+  {{/each}}
+</div>

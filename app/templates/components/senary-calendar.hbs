@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="controller">
+    <h1 id="hed">{{visibleYear}}</h1>
+    <button {{action "previousYear"}}>Previous</button>
+    <button {{action "nextYear"}}>Next</button>
+    {{#if isToday}}
+      <button {{action "gotoToday"}} disabled="disabled">Today</button>
+    {{else}}
+      <button {{action "gotoToday"}}>Today</button>
+    {{/if}}
+  </div>
+  {{#each m in months}}
+    {{senary-calendar-month year=visibleYear month=m}}
+  {{/each}}
+</div>

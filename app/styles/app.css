@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Avenir Next LT W01';
+  src: url('fonts/avenirnextltpro-regular.woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT W01';
+  src: url('fonts/avenirnextltpro-demi.woff');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT W01';
+  src: url('fonts/avenirnextltpro-bold.woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Avenir Next LT W01', Arial, sans-serif;
+  color: rgba(0,0,0,.8);
+}
+
+button[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.controller {
+  overflow: auto;
+  width: 100%;
+}
+
+#hed {
+  float: left;
+  margin: 0;
+}
+
+#hed ~ button{
+  float: right;
+  border: 0;
+  background-color: transparent;
+}
+
+.calendar {
+  float: left;
+  margin: 0 4px;
+}
+
+.month-label {
+  text-align: center;
+}
+
+.month {
+  display: -webkit-flex;
+  -webkit-flex-flow: column wrap;
+}
+
+.date {
+  box-sizing: border-box;
+  padding-right: 4px;
+  text-align: right;
+}
+
+.date:nth-child(6n) {
+  margin-bottom: 24px;
+}
+
+.date:nth-child(30) {
+  margin-bottom: 0;
+}
+
+.date[data-date="2015-04-01"] {
+  background-color: #505050;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.main {width: 480px}
+.month {width: 120px; height: 120px;}
+.date {width: 24px; height: 16px;}
